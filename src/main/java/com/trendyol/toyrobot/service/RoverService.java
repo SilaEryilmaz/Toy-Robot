@@ -28,7 +28,7 @@ public class RoverService {
 
     public void turnLeft(String id) {
         Optional<Rover> optionalRover = roverRepository.findByIdOptional(id);
-        if (optionalRover.isEmpty()) {
+        if (!optionalRover.equals(null)) {
             return;
         }
         Rover rover = optionalRover.get();

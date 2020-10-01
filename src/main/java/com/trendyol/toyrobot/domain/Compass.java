@@ -1,5 +1,9 @@
 package com.trendyol.toyrobot.domain;
 
-public enum Compass {
-    NORTH, SOUTH, WEST, EAST
+public interface Compass {
+
+    void move(Coordinate coordinate);
+    Compass turnLeft();
+    Compass turnRight();
+    String getName();
 }
